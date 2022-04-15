@@ -18,9 +18,9 @@ fetchCoordsByIP("38.133.49.18", (error, coordinates) => {
   console.log('It worked! Returned coordinates:' , coordinates);
 });
 
-const exampleCoords = { latitude: '45.6196', longitude: '-73.7366' };
+const Coords = { latitude: '45.6196', longitude: '-73.7366' };
 
-fetchISSFlyOverTimes(exampleCoords, (error, passTimes) => {
+fetchISSFlyOverTimes(Coords, (error, passTimes) => {
   if (error) {
     console.log("It didn't work!" , error);
     return;
@@ -45,3 +45,4 @@ nextISSTimesForMyLocation((error, passTimes) => {
   console.log(passTimes);
   printPassTimes(passTimes);
 });
+ module.exports = {printPassTimes}
